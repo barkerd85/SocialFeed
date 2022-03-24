@@ -1,23 +1,52 @@
-import logo from './logo.svg';
 import './App.css';
+import bootstrap from 'bootstrap';
+import React, { useState } from "react";
+import CreatePost from './Components/CreatePost';
+import DisplayPosts from './Components/DisplayPosts';
+import NavBar from './Components/NavBar';
+
+
+
+
+
 
 function App() {
+  const [posts, setPosts] = useState([
+    { name: "", comment: "Test" },
+    { name: "", comment: "Test" },
+  ]);
+
+  function addNewPost(post) {
+    let tempPosts = [post, ...posts];
+    setPosts(tempPosts);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div className="container-fluid">
+      <div className="row">
+        <div className="col-md-6 mx-auto">
+          <div className="border-nav">
+          <NavBar />  
+          </div>
+        </div>
+      </div>
+      <main>
+        <div className="row">
+          <div className="col-md-6 mx-auto">
+            <div className="border-box">
+              <CreatePost addNewPostProp={addNewPost} />
+            </div>
+            <div className="border-box">
+              <DisplayPosts post={posts} />
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+   
+ 
+
+    
     </div>
   );
 }
