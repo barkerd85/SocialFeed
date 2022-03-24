@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-
 import Post from './Post';
+
+
+
 
 const DisplayPosts = (props) => {
 
@@ -8,7 +10,7 @@ const DisplayPosts = (props) => {
     <table className='table'>
       <thead className='thread-dark'>
         <tr>
-          <th>Social Feed</th>
+          <th>Recent Post</th>
         </tr>
       </thead>
       <tbody>

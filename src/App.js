@@ -8,13 +8,9 @@ import NavBar from './Components/NavBar';
 
 
 
-
-
 function App() {
   const [posts, setPosts] = useState([
-    { name: "", comment: "Test" },
-    { name: "", comment: "Test" },
-  ]);
+    ]);
 
   function addNewPost(post) {
     let tempPosts = [post, ...posts];
@@ -22,21 +18,21 @@ function App() {
   }
   return (
     <div className='App'>
-      <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-6 mx-auto">
-          <div className="border-nav">
+      <div className='container-fluid'>
+      <div className='row'>
+        <div className='col-md-6 mx-auto'>
+          <div className='border-nav'>
           <NavBar />  
           </div>
         </div>
       </div>
       <main>
-        <div className="row">
-          <div className="col-md-6 mx-auto">
-            <div className="border-box">
+        <div className='row'>
+          <div className='col-md-6 mx-auto'>
+            <div className='border-box'>
               <CreatePost addNewPostProp={addNewPost} />
-            </div>
-            <div className="border-box">
+            </div><br/><br/>
+              <div className='border-box'>
               <DisplayPosts post={posts} />
             </div>
           </div>
@@ -44,11 +40,13 @@ function App() {
       </main>
     </div>
    
- 
-
-    
     </div>
   );
 }
 
-export default App;
+export default App;      
+ 
+
+    
+    
+  

@@ -10,24 +10,24 @@ const [comment, setComment] = useState('');
 
 function handleSubmit(event) {
     event.preventDefault();
-    let newEntry = {
+    let newPost = {
         name: name,
         comment: comment
     };
-    props.addNewPostProp(newEntry);
+    props.addNewPostProp(newPost);
 }
 
     return ( 
         <form onSubmit={handleSubmit} className='form-grid'>
             <div className='form-group'>
             <label className='form-name'>Name:</label>
-            <input type='text' className='form-control' value={name} onChange={(event) => setName(event.target.value)} />
+            <input class="form-control form-control-lg" type="text" placeholder="....." value={name} onChange={(event) => setName(event.target.value)} />
             </div>
             <div className='form-group'>
-            <label className='form-name'>Post:</label>
+            <label className='form-name'>New Post:</label>
             <textarea type='text' className='form-control' value={comment} onChange={(event) => setComment(event.target.value)} />
-            </div>
-            <button type='submit' className="btn btn-primary button-style" >Submit</button>
+            </div><br />
+            <button type='submit' class="btn btn-success" >Post</button>
         </form>
      );
 }

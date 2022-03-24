@@ -1,12 +1,13 @@
 .form-grid {
-  display: grid;
+  display: block;
 }
 
 .button-style {
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 .form-name {
   font-weight: initial;
   text-decoration: none;
 }
+

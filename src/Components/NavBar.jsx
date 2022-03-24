@@ -1,3 +1,6 @@
+import './NavBar.css'
+
+
 const NavBar = (props) => {
     return ( 
         <header>
@@ -7,3 +10,4 @@ const NavBar = (props) => {
 }
  
 export default NavBar;
+

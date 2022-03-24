@@ -2,34 +2,36 @@ import React, { useState } from 'react';
 import { FaThumbsDown } from 'react-icons/fa';
 import { FaThumbsUp } from 'react-icons/fa';
 import './Post.css'
-
-
+import { DateTime } from 'react-datetime-bootstrap';
 
 
 const Post = (props) => {
 
 
-const [likeactive, setLikeactive] = useState(false);
-const [dislikeactive, setDislikeactive] = useState(false);
 
-function likef(){
+
+const [likeactive, setLikedactive] = useState(false);
+const [dislikeactive, setDislikedactive] = useState(false);
+
+function likePost(){
   if (likeactive){
-    setLikeactive(false)
+    setLikedactive(false)
   } else{
-    setLikeactive(true)
+    setLikedactive(true)
     if(dislikeactive){
-      setDislikeactive(false)
+      setDislikedactive(false)
     }
   }
 }
 
-function dislikef(){
+
+function dislikePost(){
   if (dislikeactive){
-    setDislikeactive(false)
+    setDislikedactive(false)
   } else{
-    setDislikeactive(true)
+    setDislikedactive(true)
     if(likeactive){
-      setLikeactive(false)
+      setLikedactive(false)
     }
   }
 }
@@ -39,13 +41,13 @@ function dislikef(){
 
     <td>
       <div>
-        <h3 className="col">{props.post.name}</h3>
-        <p className="col">{props.post.comment}</p>
+        <h3 className='col'>{props.post.name}</h3>
+        <p className='col'>{props.post.comment}</p>
         <div>
-        <button className={[likeactive ? 'like': null, '' ].join('')} onClick={likef} >
+        <button className={[likeactive ? 'like': null, '' ].join('')} onClick={likePost} >
         <FaThumbsUp />
         </button>
-        <button className={[dislikeactive ? 'dislike': null, '' ].join('')} onClick={dislikef}>
+        <button className={[dislikeactive ? 'dislike': null, '' ].join('')} onClick={dislikePost}>
         <FaThumbsDown/>
         </button>
         </div>

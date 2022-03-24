@@ -1,14 +1,13 @@
-.form-grid {
-    display: grid;
-  }
-  
-  .button-style {
-    margin-top: 1em;
-  }
-  
-  .form-name {
-    font-weight: initial;
-    text-decoration: none;
-  }
-  
+.button-style {
+  margin-top: 2em;
+}
 
+.form-name {
+  font-weight: initial;
+  text-decoration: none;
+}
+
+
+.form-grid {
+  display: block;
+}
