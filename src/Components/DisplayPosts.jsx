@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import Post from './Post';
+import './DisplayPosts.css'
 
 
 
@@ -10,7 +10,7 @@ const DisplayPosts = (props) => {
     <table className='table'>
       <thead className='thread-dark'>
         <tr>
-          <th>Recent Post</th>
+        <h2>Recent Post</h2>
         </tr>
       </thead>
       <tbody>
@@ -28,3 +28,5 @@ const DisplayPosts = (props) => {
 };
 
 export default DisplayPosts;
+
+          
