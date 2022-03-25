@@ -14,7 +14,7 @@ function handleSubmit(event) {
         name: name,
         comment: comment
     };
-    props.addNewPostProp(newPost);
+    props.addNewPost(newPost);
 }
 
     return ( 
@@ -24,7 +24,7 @@ function handleSubmit(event) {
             <input class="form-control form-control-lg" type="text" placeholder="....." value={name} onChange={(event) => setName(event.target.value)} />
             </div>
             <div className='form-group'>
-            <label className='form-name'>New Post:</label>
+            <label className='form-name'>Add New Post:</label>
             <textarea type='text' className='form-control' value={comment} onChange={(event) => setComment(event.target.value)} />
             </div><br />
             <button type='submit' class="btn btn-success" >Post</button>

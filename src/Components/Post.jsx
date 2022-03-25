@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
-import { DateTime } from 'react-datetime-bootstrap';
-import { FaThumbsDown } from 'react-icons/fa';
-import { FaThumbsUp } from 'react-icons/fa';
 import './Post.css'
+import React, { useState } from 'react';
+import { FaThumbsUp } from 'react-icons/fa';
+import { FaThumbsDown } from 'react-icons/fa';
+
+
+
+
+
+
+
 
 
 
@@ -15,6 +21,12 @@ const [likeactive, setLikedactive] = useState(false);
 const [dislikeactive, setDislikedactive] = useState(false);
 const today = new Date();
 const date = `${today.getMonth()}/${today.getDate()}/${today.getFullYear()}`
+
+
+
+
+
+
 
 function likePost(){
   if (likeactive){
@@ -45,24 +57,31 @@ function dislikePost(){
     <td>
       <div>
         <h3 className='col'>{props.post.name}</h3>
-        <p className='col'>{props.post.comment}</p>
+        <h4 className='col'>{props.post.comment}</h4>
+        <p>{today.toDateString()}</p>
         <div>
-        <DateTime inputProps={{className:'datetime'}} />
+        <h5>{date}</h5>
+        
+       
+        
         <br />
-        <button className={[likeactive ? 'like': null, '' ].join('')} onClick={likePost} >
-          
-        <FaThumbsUp />
+        <button className={likeactive ? 'like': "" } onClick={likePost} >
+         <FaThumbsUp />
         </button>
-        <button className={[dislikeactive ? 'dislike': null, '' ].join('')} onClick={dislikePost}>
+        <button className={dislikeactive ? 'dislike': ""} onClick={dislikePost}>
         <FaThumbsDown/>
         </button>
         
         </div>
       </div>
+      <div>
+       
+      </div>
     </td>
   );
 };
 
-export default Post;
+export default Post; 
+        
         
         

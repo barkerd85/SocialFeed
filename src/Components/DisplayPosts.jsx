@@ -1,5 +1,6 @@
 import Post from './Post';
-import './DisplayPosts.css'
+import './DisplayPosts.css';
+import React from 'react';
 
 
 

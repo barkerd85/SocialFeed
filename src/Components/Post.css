@@ -13,8 +13,12 @@
 }
 
 
-.datetime{
-  border: none;
-  
+.like{
+  color: green;
+  background-color: black;
+}
 
+.dislike{
+  color: red;
+  background-color: black;
 }
